@@ -22,7 +22,7 @@ function AllSkateparks(data) {
   </Link>
 
   <div>
-        {data.data.map((parks, index) => {
+        {data.data.slice(1,5).map((parks, index) => {
           return (
             <div key={index}>
               <h3 id={index} >{parks.name}</h3>
@@ -34,10 +34,6 @@ function AllSkateparks(data) {
           );
         })}
       </div>
-
-
-
-
   </>
 }
 
