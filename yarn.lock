@@ -699,6 +699,11 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
+tsx@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/tsx/-/tsx-1.0.0.tgz#f8b515835caff098172c7232bb2b1330be449265"
+  integrity sha1-+LUVg1yv8JgXLHIyuysTML5EkmU=
+
 use-subscription@1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/use-subscription/-/use-subscription-1.5.1.tgz#73501107f02fad84c6dd57965beb0b75c68c42d1"
