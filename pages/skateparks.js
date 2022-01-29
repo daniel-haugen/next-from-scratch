@@ -2,7 +2,7 @@ import Link from "next/link"
 
 
 export async function getStaticProps(context) {
-  const res = await fetch("https://skateparks-wa.herokuapp.com/skateparks");
+  const res = await fetch('https://skateparks-wa.herokuapp.com/skateparks');
   const data = await res.json();
   if (!data) {
     return {
@@ -15,7 +15,7 @@ export async function getStaticProps(context) {
 }
 
 function AllSkateparks(data) {
-  return <>
+  return <> 
   <div>Go Home</div>
   <Link href="/">
   <a>Home</a>

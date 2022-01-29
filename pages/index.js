@@ -7,6 +7,14 @@ function HomePage() {
   <Link href="/skateparks">
   <a>all skateparks</a>
   </Link>
+  <br></br>
+  <br></br>
+  <br></br>
+  <Link href="/100">
+  <a>Benefit Skatedot</a>
+  </Link>
+
+
   </>
 }
 
