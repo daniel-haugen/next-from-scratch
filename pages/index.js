@@ -1,5 +1,6 @@
 function HomePage() {
-  return <div>Welcome to Next.js!</div>
+  return <div>Welcome to the Skate App
+  </div>
 }
 
 export default HomePage
