@@ -1,13 +1,12 @@
-import Link from "next/link"
-
+import Link from "next/link";
 
 export async function getStaticProps(context) {
-  const res = await fetch('https://skateparks-wa.herokuapp.com/skateparks');
+  const res = await fetch("https://skateparks-wa.herokuapp.com/skateparks");
   const data = await res.json();
   if (!data) {
     return {
       notFound: true,
-    }
+    };
   }
   return {
     props: { data },
@@ -15,17 +14,18 @@ export async function getStaticProps(context) {
 }
 
 function AllSkateparks(data) {
-  return <> 
-  <div>Go Home</div>
-  <Link href="/">
-  <a>Home</a>
-  </Link>
+  return (
+    <>
+      <div>Go Home</div>
+      <Link href="/">
+        <a>Home</a>
+      </Link>
 
-  <div>
-        {data.data.slice(1,5).map((parks, index) => {
+      <div>
+        {data.data.slice(1, 5).map((parks, index) => {
           return (
             <div key={index}>
-              <h3 id={index} >{parks.name}</h3>
+              <h3 id={index}>{parks.name}</h3>
               <p>{parks.native_land}</p>
               <p>Rain cover? {parks.rain_cover.toString()}</p>
               <p>Does it have lights? {parks.night_light.toString()}</p>
@@ -34,7 +34,9 @@ function AllSkateparks(data) {
           );
         })}
       </div>
-  </>
+      <button>Go Home Roger</button>
+    </>
+  );
 }
 
-export default AllSkateparks
+export default AllSkateparks;
