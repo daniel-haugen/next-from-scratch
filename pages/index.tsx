@@ -6,16 +6,11 @@ function HomePage() {
   return <>
 
   <Navbar />
-  <div>Welcome to the Skate App</div>
-  <Link href="/skateparks">
-  <a>all skateparks</a>
-  </Link>
+  <h1 className='flex justify-center item-center m-10 text-xl'>Welcome to SkateWA</h1>
   <br></br>
   <br></br>
   <br></br>
-  <Link href="/100">
-  <a>Benefit Skatedot</a>
-  </Link>
+  
 
 
   </>

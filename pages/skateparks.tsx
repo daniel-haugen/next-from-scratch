@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Navbar from "../components/Navbar";
+import Card from "../components/Card";
 
 export async function getStaticProps(context) {
   const res = await fetch("https://skateparks-wa.herokuapp.com/skateparks");
@@ -16,15 +18,24 @@ export async function getStaticProps(context) {
 function AllSkateparks(data) {
   return (
     <>
-      <div>Go Home</div>
-      <Link href="/">
-        <a>Home</a>
-      </Link>
+    <Navbar />
+      <div className='flex gap-5 flex-wrap justify-center mt-6'>
 
-      <div>
-        {data.data.slice(1, 5).map((parks, index) => {
+      {data.data.slice(1, 20).map((parks, index) => {
           return (
-            <div key={index}>
+            <Card key={index} name={parks.name} address={parks.full_address} />    
+          );
+        })}
+
+        
+
+
+
+        {/* {data.data.slice(1, 20).map((parks, index) => {
+          return (
+            <div 
+            key={index}
+            className={s.card}>
               <h3 id={index}>{parks.name}</h3>
               <p>{parks.native_land}</p>
               <p>Rain cover? {parks.rain_cover.toString()}</p>
@@ -32,9 +43,10 @@ function AllSkateparks(data) {
               <p>{parks.full_address}</p>
             </div>
           );
-        })}
+        })} */}
+
+
       </div>
-      <button>Go Home Roger</button>
     </>
   );
 }

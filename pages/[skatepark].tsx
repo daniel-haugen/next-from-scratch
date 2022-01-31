@@ -1,10 +1,9 @@
 import Link from "next/link"
+import Navbar from "../components/Navbar"
 
 function Skatepark(skateparkInfo) {
   return <>
-  <Link href="/">
-  <a>let's go Home</a>
-  </Link>
+  <Navbar />
   <div>hello</div>
   <p>{skateparkInfo.skateparkInfo.name}</p>
   <p>{skateparkInfo.skateparkInfo.full_address}</p>
