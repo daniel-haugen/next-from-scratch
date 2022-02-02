@@ -8,9 +8,14 @@ interface Link {
   label: string;
 }
 
-const Card: FC<{ name: string; address: string }> = (props) => (
+const Card: FC<{ name: string; address: string; native_land: string; slug: string }> = (props) => (
   <div className={s.cardCtr}>
-    <h3 className={s.skateparkName}>{props.name}</h3>
+    <Link href={'/' + props.slug}>
+      <a>
+        <h3 className={s.skateparkName}>{props.name}</h3>
+      </a>
+    </Link>
+
     <div className={s.image}>Image</div>
     <div>
       <p>{props.address}</p>

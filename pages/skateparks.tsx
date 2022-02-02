@@ -5,7 +5,7 @@ import Card from "../components/Card";
 import { useEffect, useState } from "react";
 
 export async function getStaticProps(context) {
-  const res = await fetch("https://skateparks-wa.herokuapp.com/skateparks");
+  const res = await fetch("https://skateparks-wa.herokuapp.com/allskateparksdingdong");
   const data = await res.json();
   if (!data) {
     return {
@@ -32,7 +32,7 @@ function AllSkateparks({ data }) {
 
     if (pageCount > 0) {
       return parksToShow.map((parks, index) => {
-        return <Card key={index} name={parks.name} address={parks.full_address} />;
+        return <Card key={index} name={parks.name} address={parks.address} native_land={parks.native_land} slug={parks.slug} />;
       });
       
     
