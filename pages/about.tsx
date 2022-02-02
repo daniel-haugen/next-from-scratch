@@ -8,11 +8,12 @@ function About() {
      <div className="flex justify-center align-items-center mt-10">
       About Page
     
-     {/* <Image
+     <Image
       src='/../public/thicc.jpg'
       alt='you know what it is'
       width='500'
-      height='500'/> */}
+      height='500'
+      className='mt-5'/>
       </div>  
   </>
 
