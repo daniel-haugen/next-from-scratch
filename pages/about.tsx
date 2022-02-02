@@ -5,15 +5,14 @@ import Image from 'next/image'
 function About() {
   return <>
   <Navbar />
-     <div className="flex justify-center align-items-center mt-10">
-      About Page
+     <div className="flex flex-col mt-10 justify-center w-full items-center">
+      <b className="mb-10 text-xl">About Page</b>
     
      <Image
-      src='/../public/thicc.jpg'
+      src='/thicc.jpg'
       alt='you know what it is'
       width='500'
-      height='500'
-      className='mt-5'/>
+      height='700'/>
       </div>  
   </>
 
