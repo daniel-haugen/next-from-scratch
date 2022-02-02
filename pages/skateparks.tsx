@@ -42,38 +42,23 @@ function AllSkateparks({ data }) {
   return (
     <>
       <Navbar />
-      <div className="flex gap-5 flex-wrap justify-center mt-6">
-        
+      <div className="flex gap-5 flex-wrap justify-start align-items-center mt-6 ">
         {renderParks()}
-
-        {/* {data.data.slice(1, 20).map((parks, index) => {
-          return (
-            <div 
-            key={index}
-            className={s.card}>
-              <h3 id={index}>{parks.name}</h3>
-              <p>{parks.native_land}</p>
-              <p>Rain cover? {parks.rain_cover.toString()}</p>
-              <p>Does it have lights? {parks.night_light.toString()}</p>
-              <p>{parks.full_address}</p>
-            </div>
-          );
-        })} */}
       </div>
-      <p>you're on page #{page}</p>
+      <p>you're on page {page}</p>
       <div className="flex gap-10">
       
+      <div className='flex gap-5'>
       {page > 1 && 
       <button className="bg-midnight text-white" onClick={() => setPage(page - 1)}>
           Go Back
         </button>}
-      
-
+    
         {pageCount == 7 && 
         <button className="bg-midnight text-white" onClick={() => setPage(page + 1)}>
           Next Page
         </button>}
-
+        </div>
         
       </div>
     </>

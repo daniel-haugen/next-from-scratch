@@ -23,11 +23,6 @@ const Navbar: FC = () => (
         </Link>
       </li>
       <li>
-        <Link href="/wilkeson-skatepark">
-          <a>Wilkeson Skatepark</a>
-        </Link>
-      </li>
-      <li>
         <Link href="/about">
           <a>About</a>
         </Link>

@@ -8,9 +8,10 @@
 .skateparkName {
   @apply flex pl-5 pt-2;
   font-family: monospace;
-  font-size: 25px;
-  background-color: blue;
+  font-size: 20px;
+  background-color: lightgray;
   height: 60px;
+  text-overflow: ellipsis;
 }
 
 .image {
