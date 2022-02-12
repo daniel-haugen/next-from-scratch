@@ -1,8 +1,9 @@
-import Link from "next/link";
-import { FC } from "react";
-import Navbar from "../components/Navbar";
-import Card from "../components/Card";
-import { useEffect, useState } from "react";
+import Link from "next/link"
+import { FC } from "react"
+import Navbar from "../components/Navbar"
+import Card from "../components/Card"
+import { useEffect, useState } from "react"
+import Pagination from '../components/Pagination'
 
 export async function getStaticProps(context) {
   const res = await fetch("https://skateparks-wa.herokuapp.com/allskateparksdingdong");
@@ -17,7 +18,7 @@ export async function getStaticProps(context) {
   };
 }
 
-let pageCount= 0;
+let pageCount = 0;
 
 function AllSkateparks({ data }) {
   const [allParks, setAllParks] = useState(data);
@@ -34,33 +35,17 @@ function AllSkateparks({ data }) {
       return parksToShow.map((parks, index) => {
         return <Card key={index} name={parks.name} address={parks.address} native_land={parks.native_land} slug={parks.slug} />;
       });
-      
-    
+    }
   };
-}
 
   return (
     <>
       <Navbar />
-      <div className="flex gap-5 flex-wrap justify-start align-items-center mt-6 ">
-        {renderParks()}
-      </div>
-      <p>you're on page {page}</p>
-      <div className="flex gap-10">
-      
-      <div className='flex gap-5'>
-      {page > 1 && 
-      <button className="bg-midnight text-white" onClick={() => setPage(page - 1)}>
-          Go Back
-        </button>}
-    
-        {pageCount == 7 && 
-        <button className="bg-midnight text-white" onClick={() => setPage(page + 1)}>
-          Next Page
-        </button>}
-        </div>
+      <Pagination />
+      <div className="flex gap-5 flex-wrap justify-start align-items-center mt-6 ">{renderParks()}</div>
+         
+
         
-      </div>
     </>
   );
 }
