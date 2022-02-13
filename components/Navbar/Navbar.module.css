@@ -10,12 +10,12 @@
   color: white;
 }
 
-.mobile {
-  @apply hidden;
+.mobileNotActive {
+  @apply hidden opacity-0;
 }
 
 .mobileActive {
-  @apply flex flex-col bg-silver;
+  @apply block fixed bg-silver w-full ;
 }
  
 .h1 {

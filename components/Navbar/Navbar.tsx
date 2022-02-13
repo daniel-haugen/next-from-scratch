@@ -14,7 +14,6 @@ const Navbar: FC = () => {
 
   return (
     <>
-      {" "}
       <header className={s.header}>
         <Link href="/">
           <a>
@@ -50,7 +49,7 @@ const Navbar: FC = () => {
       </header>
 
       {/* <!-- mobile activated menu --> */}
-      <ul className={active ? s.mobileActive : s.mobile}>
+      <ul className={active ? s.mobileActive : s.mobileNotActive}>
         <li className={s.menuItem}>
           <Link href="/skateparks">
             <a>All Skateparks</a>
