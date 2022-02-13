@@ -6,7 +6,7 @@ import { useEffect, useState } from "react"
 import Pagination from '../components/Pagination'
 
 export async function getStaticProps(context) {
-  const res = await fetch("https://skateparks-wa.herokuapp.com/allskateparksdingdong");
+  const res = await fetch("https://skateparks-wa.herokuapp.com/sp-min");
   const data = await res.json();
   if (!data) {
     return {

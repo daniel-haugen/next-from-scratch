@@ -9,7 +9,7 @@ function HomePage() {
   return (
     <>
       <Navbar />
-      <h1 className="flex justify-center item-center m-10 text-xl">Welcome to SkateWA</h1>
+      <h1 className="flex justify-center item-center m-10 text-xl">Welcome to SkateWA!</h1>
       <br></br>
       <br></br>
       <div className="w-ful">
@@ -18,7 +18,7 @@ function HomePage() {
           options={{
             rewind: true,
             gap: "1rem",
-            autoWidth: true
+            // autoWidth: true
           }}
         >
           <SplideSlide className="">
