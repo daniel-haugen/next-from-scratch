@@ -1,21 +1,32 @@
-.testy {
-  @apply bg-silver h-12 flex justify-center items-center hover:bg-purple lg:hover:bg-midnight;
-}
-
 .header {
-  @apply flex bg-purple;
+  @apply flex bg-purple h-16 items-center;
 }
 
-.ul {
-  @apply m-5;
-  display: flex;
-  /* flex-direction: column; */
+.desktop {
+  @apply m-5 hidden md:flex;
   margin-left: auto;
   margin-right: 5%;
   gap: 40px;
   color: white;
 }
 
+.mobile {
+  @apply hidden;
+}
+
+.mobileActive {
+  @apply flex flex-col bg-silver;
+}
+ 
 .h1 {
   @apply text-white text-xl m-5;
+}
+
+.menuButton {
+  @apply w-6 bg-white rounded-md;
+  height: 3px;
+}
+
+.menuItem {
+  @apply hover:bg-white h-10 p-10 flex flex-col justify-center;
 }
