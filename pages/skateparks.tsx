@@ -45,8 +45,9 @@ function AllSkateparks({ data }) {
   return (
     <>
       <Navbar />
-      <Pagination page={page} setPage={setPage} parkCount={parkCount} parksPerPage={parksPerPage} />
-      <div className="flex gap-5 flex-wrap justify-start align-items-center mt-6 ">
+        <Pagination page={page} setPage={setPage} parkCount={parkCount} parksPerPage={parksPerPage} />
+      
+      <div className="flex gap-5 flex-wrap justify-start align-items-center">
         {renderParks()}
       </div>
     </>
