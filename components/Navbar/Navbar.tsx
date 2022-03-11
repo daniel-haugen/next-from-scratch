@@ -4,20 +4,23 @@ import s from "./Navbar.module.css";
 import { redirect } from "next/dist/server/api-utils";
 import { useState } from "react";
 
+
 interface Link {
   href: string;
   label: string;
 }
 
 const Navbar: FC = () => {
+ // state for mobile side-nav
   const [active, setActive] = useState(false);
+
 
   return (
     <>
-      <header className={s.header}>
+      <header className="flex h-16 items-center bg-gunmetal font-bold">
         <Link href="/">
           <a>
-            <h1 className={s.h1}>Skate App</h1>
+            <h1 className={s.h1}>SkateWA</h1>
           </a>
         </Link>
 
