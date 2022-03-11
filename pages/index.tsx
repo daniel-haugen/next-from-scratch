@@ -10,8 +10,7 @@ function HomePage() {
     <>
       <Navbar />
       <h1 className="flex justify-center item-center m-10 text-xl">Welcome to SkateWA!</h1>
-      <br></br>
-      <br></br>
+   
       <div className="w-ful">
         <h2>Dog Park Bb</h2>
         <Splide

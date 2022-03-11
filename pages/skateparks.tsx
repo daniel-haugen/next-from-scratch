@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Card from "../components/Card";
 import { useEffect, useState } from "react";
 import Pagination from "../components/Pagination";
+import Footer from "../components/Footer";
 
 export async function getStaticProps(context) {
   const res = await fetch("https://skateparks-wa.herokuapp.com/sp-min");
@@ -46,10 +47,10 @@ function AllSkateparks({ data }) {
     <>
       <Navbar />
         <Pagination page={page} setPage={setPage} parkCount={parkCount} parksPerPage={parksPerPage} />
-      
       <div className="flex gap-5 flex-wrap justify-start align-items-center">
         {renderParks()}
       </div>
+      <Footer />
     </>
   );
 }

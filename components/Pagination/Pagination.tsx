@@ -9,7 +9,7 @@ const Pagination: FC<{
   parksPerPage: number;
 }> = (props) => (
 
-  <div className="bg-silver w-1/4 my-10 flex justify-between">
+  <div className={s.ctr}>
     {props.page === 1 ? (<div className=""></div>) : (
       <button className="bg-midnight text-white" onClick={() => props.setPage(props.page - 1)}>Go Back</button>
     )}

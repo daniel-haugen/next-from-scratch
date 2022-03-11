@@ -1,0 +1,3 @@
+.ctr {
+  @apply w-1/4 my-10 flex justify-between;
+}
