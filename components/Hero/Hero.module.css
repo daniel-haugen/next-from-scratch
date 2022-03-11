@@ -1,0 +1,11 @@
+.button {
+  @apply bg-white rounded px-5 py-2;
+}
+
+.search{
+@apply rounded;
+}
+
+.searchButton{
+  @apply rounded bg-white ml-4 px-3;
+  }
