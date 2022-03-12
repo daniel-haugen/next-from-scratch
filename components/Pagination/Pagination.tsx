@@ -11,11 +11,11 @@ const Pagination: FC<{
 
   <div className={s.ctr}>
     {props.page === 1 ? (<div className=""></div>) : (
-      <button className="bg-midnight text-white" onClick={() => props.setPage(props.page - 1)}>Go Back</button>
+      <button className={s.button} onClick={() => props.setPage(props.page - 1)}>Back</button>
     )}
 
     {props.parkCount !== props.parksPerPage ? null : 
-      <button className="bg-midnight text-white" onClick={() => props.setPage(props.page + 1)}>Next Page</button>
+      <button className={s.button} onClick={() => props.setPage(props.page + 1)}>Next</button>
     }
 
 

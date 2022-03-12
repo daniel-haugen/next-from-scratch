@@ -13,12 +13,12 @@ const Footer: FC = () => (
     <Link href="/">
       <a>
         <h1 className={s.h1}>
-        Footer
+        SkateWA
         </h1>
       </a>
     </Link>
 
-    <ul className={s.ul}>
+    {/* <ul className={s.ul}>
       <li>
         <Link href="/skateparks">
           <a>All Skateparks</a>
@@ -29,7 +29,7 @@ const Footer: FC = () => (
           <a>About</a>
         </Link>
       </li>
-    </ul>
+    </ul> */}
   </footer>
 );
 

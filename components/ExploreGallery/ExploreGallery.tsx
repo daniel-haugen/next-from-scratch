@@ -3,6 +3,7 @@ import Link from "next/link";
 import s from "./Navbar.module.css";
 import { redirect } from "next/dist/server/api-utils";
 import { useState } from "react";
+import GalleryCard from '../GalleryCard';
 
 interface Link {
   href: string;
@@ -11,23 +12,37 @@ interface Link {
 
 const ExploreGallery: FC = () => {
   return (
-    <div className="bg-white rounded mx-6 mt-10">
-      <h3 className="ml-5 pt-5 mb-10 text-lg font-bold underline">
-        Dog-Friendly Parks
+    <>
+    <div className="bg-white rounded mx-6 mt-10 flex flex-col pb-5">
+      <h3 className="ml-10 pt-6 pb-3 text-2xl w-1/2 font-bold">
+        Dog-Friendly Skateparks
       </h3>
 
-      <div className="flex flex-col py-5">
-        <div className="bg-grey w-1/2 mb-4 h-32 mx-auto"></div>
-        <h3 className="mx-auto font-bold">Judkins Skatepark</h3>
-        <p className="ml-5">This is a description of the park ya know.</p>
+      <div id="grid-container" className="py-5 mt-3 h-80 overflow-auto">
+        <GalleryCard name="Judkins" image="test2"/>
+        <GalleryCard name="Jefferson" image="test2"/>
+        <GalleryCard name="Seask8" image="test2"/>
+        <GalleryCard name="Marginal Way" image="test2"/>
       </div>
 
-      <div className="flex flex-col py-5">
-        <div className="bg-grey w-1/2 mb-4 h-32 mx-auto"></div>
-        <h3 className="mx-auto font-bold">Judkins Skatepark</h3>
-        <p className="ml-5">This is a description of the park ya know.</p>
-      </div>
     </div>
+    
+    
+    <div className="bg-white rounded mx-6 mt-10 flex flex-col">
+      <h3 className="ml-10 pt-6 pb-3 text-2xl w-1/2 font-bold">
+        Cool Kid Skateparks
+      </h3>
+
+      <div id="grid-container" className="py-5 mt-3 h-80 overflow-auto">
+        <GalleryCard name="Judkins" image="test2"/>
+        <GalleryCard name="Jefferson" image="test2"/>
+        <GalleryCard name="Seask8" image="test2"/>
+        <GalleryCard name="Marginal Way" image="test2"/>
+      </div>
+
+    </div>
+    
+    </>
   );
 };
 

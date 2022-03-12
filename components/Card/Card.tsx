@@ -2,6 +2,7 @@ import { FC } from "react";
 import Link from "next/link";
 import s from "./Card.module.css";
 import { getStaticProps } from "../../pages/[skatepark]";
+import Image from 'next/image';
 
 interface Link {
   href: string;
@@ -16,8 +17,12 @@ const Card: FC<{ name: string; address: string; native_land: string; slug: strin
       </a>
     </Link>
 
-    <div className={s.image}>Image</div>
-    <div>
+    <div className={s.image}>
+
+    <Image src='/thicc.jpg' alt='you know what it is' layout="fill"/>
+
+    </div>
+    <div className={s.address}>
       <p>{props.address}</p>
     </div>
   </div>

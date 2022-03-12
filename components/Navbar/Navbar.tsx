@@ -17,7 +17,7 @@ const Navbar: FC = () => {
 
   return (
     <>
-      <header className="flex h-16 items-center bg-gunmetal font-bold">
+      <header className={s.header}>
         <Link href="/">
           <a>
             <h1 className={s.h1}>SkateWA</h1>

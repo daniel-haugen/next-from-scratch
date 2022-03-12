@@ -1,3 +1,7 @@
+.header {
+  @apply flex h-20 items-center bg-gunmetal font-bold;
+}
+
 .desktop {
   @apply m-5 hidden md:flex;
   margin-left: auto;
@@ -11,12 +15,12 @@
 }
 
 .mobileActive {
-  @apply bg-white absolute w-72 inset-y-0 left-0 transition ease-in-out duration-300;
+  @apply z-0 bg-white absolute w-72 inset-y-0 left-0 transition ease-in-out duration-300;
 
 }
  
 .h1 {
-  @apply text-white text-xl m-5;
+  @apply text-white text-3xl m-6;
 }
 
 .menuButton {
@@ -25,5 +29,5 @@
 }
 
 .menuItem {
-  @apply hover:bg-white h-10 p-10 flex flex-col justify-center;
+  @apply hover:bg-white h-10 p-10 flex flex-col justify-center text-lg;
 }

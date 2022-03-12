@@ -50,6 +50,7 @@ function AllSkateparks({ data }) {
       <div className="flex gap-5 flex-wrap justify-start align-items-center">
         {renderParks()}
       </div>
+      <Pagination page={page} setPage={setPage} parkCount={parkCount} parksPerPage={parksPerPage} />
       <Footer />
     </>
   );

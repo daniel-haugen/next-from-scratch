@@ -1,21 +1,19 @@
 
 .cardCtr {
-  @apply w-full m-5 md:w-1/4;
-  background-color: lightblue;
+  @apply w-full my-5 mx-6 rounded md:w-1/4 bg-gray-light;
 }
 
 
 .skateparkName {
-  @apply flex pl-5 pt-2;
-  font-family: monospace;
-  font-size: 20px;
-  background-color: lightgray;
+  @apply flex items-center justify-start pl-6 bg-white rounded text-2xl;
   height: 60px;
   text-overflow: ellipsis;
 }
 
 .image {
-  height: 100px;
-  width: 150px;
-  @apply flex justify-center items-center;
+  @apply relative h-52;
+}
+
+.address {
+  @apply text-lg my-4 pl-6;
 }
