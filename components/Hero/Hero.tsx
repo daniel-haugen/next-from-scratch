@@ -7,8 +7,8 @@ const Hero: FC = () => {
   // const [active, setActive] = useState(false);
 
   return (
-    <div className="py-8 bg-charcoal flex flex-col items-center justify-center gap-5">
-      <h2 className="text-white text-xl font-bold mx-8 ">
+    <div className="py-10 bg-charcoal flex flex-col items-center justify-center gap-5">
+      <h2 className="text-white text-2xl mx-8 ">
         Search For...
       </h2>
       <div className="mt-4 flex gap-10">

@@ -8,17 +8,28 @@ const Pagination: FC<{
   parkCount: number;
   parksPerPage: number;
 }> = (props) => (
+  <div className="border-white border-t-2 border-b-2">
+    <div className={s.ctr}>
+      {props.page === 1 ? (
+        <div className=""></div>
+      ) : (
+        <button
+          className={s.button}
+          onClick={() => props.setPage(props.page - 1)}
+        >
+          Back
+        </button>
+      )}
 
-  <div className={s.ctr}>
-    {props.page === 1 ? (<div className=""></div>) : (
-      <button className={s.button} onClick={() => props.setPage(props.page - 1)}>Back</button>
-    )}
-
-    {props.parkCount !== props.parksPerPage ? null : 
-      <button className={s.button} onClick={() => props.setPage(props.page + 1)}>Next</button>
-    }
-
-
+      {props.parkCount !== props.parksPerPage ? null : (
+        <button
+          className={s.button}
+          onClick={() => props.setPage(props.page + 1)}
+        >
+          Next
+        </button>
+      )}
+    </div>
   </div>
 );
 
