@@ -31,3 +31,11 @@
 .menuItem {
   @apply hover:bg-white h-10 p-10 flex flex-col justify-center text-lg border-b-2 hover:bg-charcoal hover:text-white;
 }
+
+.divActive {
+  @apply h-full w-1/2 z-20 absolute w-64 inset-y-0 right-0 ;
+}
+
+.divNotActive {
+  @apply hidden ; 
+}

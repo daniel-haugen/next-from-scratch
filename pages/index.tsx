@@ -8,9 +8,7 @@ function HomePage() {
     <>
       <Navbar />
       <Hero />
-
       <ExploreGallery />
-
       <Footer />
     </>
   );

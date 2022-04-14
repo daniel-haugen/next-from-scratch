@@ -11,9 +11,8 @@ interface Link {
 }
 
 const Navbar: FC = () => {
- // state for mobile side-nav
+ // state for mobile slide-out nav
   const [active, setActive] = useState(false);
-
 
   return (
     <>
@@ -64,6 +63,7 @@ const Navbar: FC = () => {
           </Link>
         </li>
       </ul>
+      <button onClick={()=>setActive(false)} className={active ? s.divActive : s.divNotActive}></button>
 
     </>
   );

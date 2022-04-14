@@ -11,16 +11,20 @@ interface Link {
 const ExploreGallery: FC = () => {
   return (
     <>
-      <div className="bg-white rounded mx-6 mt-10 flex flex-col">
+
+    {/* CATEGORY 1 */}
+    
+      <div className="bg-white rounded mx-5 mt-10 flex flex-col max-w-3xl md:mx-auto">
         <h3 className="ml-10 py-4 text-2xl w-1/2 font-bold">
-          Dog-Friendly Skateparks
+          Dog-Friendly Parks
         </h3>
-        <div className="border-t-2 pt-4 bg-charcoal">
+
+        <div id="mobileGallery" className="border-t-2 pt-4 bg-charcoal md:hidden">
           <Splide
+            tag="section"
             options={{
               autoplay: true,
               arrows: false,
-             
             }}
           >
              <SplideSlide>
@@ -34,38 +38,30 @@ const ExploreGallery: FC = () => {
             </SplideSlide>
           </Splide>
         </div>
-      </div>
 
-      <div className="bg-white rounded mx-6 mt-10 flex flex-col">
-        <h3 className="ml-10 py-4 text-2xl w-1/2 font-bold">
-          Cool Kid Skateparks
-        </h3>
-        <div className="border-t-2 pt-4 bg-charcoal">
+          {/* DESKTOP VERSION */}
+          <div id="desktopGallery" className="border-t-2 pt-4 bg-charcoal hidden md:block">
           <Splide
+            tag="section"
             options={{
               autoplay: true,
               arrows: false,
+              perPage: 2,
             }}
           >
-            <SplideSlide>
-              <GalleryCard name="Sammamish" image="test2" slug="sammamish-skatepark"/>
+             <SplideSlide>
+              <GalleryCard name="Judkins" image="test2" slug="judkins-skatepark" />
             </SplideSlide>
             <SplideSlide>
               <GalleryCard name="Jefferson" image="test2" slug="jefferson-skatepark" />
             </SplideSlide>
             <SplideSlide>
-              <GalleryCard name="Judkins" image="test2" slug="judkins-skatepark" />
+              <GalleryCard name="Sammamish" image="test2" slug="sammamish-skatepark"/>
             </SplideSlide>
           </Splide>
         </div>
-      </div>
 
-      {/* <div id="grid-container" className="py-5 mt-3 h-80 overflow-auto bg-charcoal">
-        <GalleryCard name="Judkins" image="test2"/>
-        <GalleryCard name="Jefferson" image="test2"/>
-        <GalleryCard name="Seask8" image="test2"/>
-        <GalleryCard name="Marginal Way" image="test2"/>
-      </div> */}
+      </div>    
     </>
   );
 };

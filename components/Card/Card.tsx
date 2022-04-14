@@ -1,7 +1,6 @@
 import { FC } from "react";
 import Link from "next/link";
 import s from "./Card.module.css";
-import { getStaticProps } from "../../pages/[skatepark]";
 import Image from 'next/image';
 
 interface Link {

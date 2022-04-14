@@ -14,7 +14,7 @@ function Skatepark({ spInfo }) {
           <h1 className="font-bold text-center text-2xl py-4">
             {spInfo.name} Skatepark
           </h1>
-          <div className="relative h-64 mx-2">
+          <div className="relative h-80 mx-auto max-w-3xl">
             <Image src="/thicc.jpg" alt="you know what it is" layout="fill" />
           </div>
           <p className="mt-6 mx-4">

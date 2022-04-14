@@ -3,8 +3,10 @@ import Card from "../components/Card";
 import { useEffect, useState } from "react";
 import Pagination from "../components/Pagination";
 import Footer from "../components/Footer";
+import { Root } from '../helper';
 
 export async function getStaticProps(context) {
+  
   const res = await fetch("https://skateparks-wa.herokuapp.com/sp-min");
   const data = await res.json();
   if (!data) {
