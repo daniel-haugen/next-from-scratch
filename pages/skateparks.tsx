@@ -3,7 +3,7 @@ import Card from "../components/Card";
 import { useEffect, useState } from "react";
 import Pagination from "../components/Pagination";
 import Footer from "../components/Footer";
-import { Root } from '../helper';
+// import { Root } from '../helper';
 
 export async function getStaticProps(context) {
   
