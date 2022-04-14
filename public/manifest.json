@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "SkateWA",
+  "short_name": "SkateWA",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "skattboards",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    }]
+}
