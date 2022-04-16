@@ -5,6 +5,11 @@ import Image from "next/image";
 import Footer from "../components/Footer";
 
 function Skatepark({ spInfo }) {
+  
+  // This shows all data available for the park
+  console.log(spInfo);
+
+
   return (
     <>
 
@@ -19,8 +24,9 @@ function Skatepark({ spInfo }) {
             {spInfo.name} Skatepark
           </h1>
           <div className="relative h-80 mx-auto max-w-3xl">
-            <Image src="/thicc.jpg" alt="you know what it is" layout="fill" />
+            <Image src={spInfo.main.formats.small.url} alt="you know what it is" layout="fill" />
           </div>
+          <p className="text-center mt-4">If you have images of this skatepark -- email them to skatewa.info@gmail.com to have them updated :) </p>
           <p className="mt-6 mx-4">
             <b>Address:</b> {spInfo.full_address}
           </p>

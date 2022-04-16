@@ -30,9 +30,7 @@ const ExploreGallery: FC = () => {
              <SplideSlide>
               <GalleryCard name="Judkins" image="test2" slug="judkins-skatepark" />
             </SplideSlide>
-            <SplideSlide>
-              <GalleryCard name="Jefferson" image="test2" slug="jefferson-skatepark" />
-            </SplideSlide>
+            
             <SplideSlide>
               <GalleryCard name="Sammamish" image="test2" slug="sammamish-skatepark"/>
             </SplideSlide>
@@ -52,9 +50,7 @@ const ExploreGallery: FC = () => {
              <SplideSlide>
               <GalleryCard name="Judkins" image="test2" slug="judkins-skatepark" />
             </SplideSlide>
-            <SplideSlide>
-              <GalleryCard name="Jefferson" image="test2" slug="jefferson-skatepark" />
-            </SplideSlide>
+            
             <SplideSlide>
               <GalleryCard name="Sammamish" image="test2" slug="sammamish-skatepark"/>
             </SplideSlide>
