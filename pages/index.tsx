@@ -7,13 +7,20 @@ import Head from 'next/head'
 function HomePage() {
   return (
     <>
+   {/* This is just filling in <head> meta */}
     <Head>
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="apple-touch-icon" href="/logo.png" />
+      <title>SkateWA - Find Washington Skateparks</title>
+      <link rel="manifest" href="/manifest.json" />
+      <link rel="apple-touch-icon" href="/logo.png" />
     </Head>
+
+    {/* Content */}
       <Navbar />
+
       <Hero />
+
       <ExploreGallery />
+      
       <Footer />
     </>
   );

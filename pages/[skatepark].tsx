@@ -7,7 +7,11 @@ import Footer from "../components/Footer";
 function Skatepark({ spInfo }) {
   return (
     <>
+
       <Navbar />
+
+      {/* You can see what information is included at this example url:
+      https://skateparks-wa.herokuapp.com/alldem/auburn-skatepark */}
 
       <div className="w-full flex flex-col text-xl bg-charcoal">
         <div id="container" className="bg-white rounded border-2">
@@ -23,40 +27,48 @@ function Skatepark({ spInfo }) {
           <p className="my-6 mx-4">
             <b>Native Land:</b> {spInfo.native_land}
           </p>
+          <p className="my-6 mx-4">
+            <b>Rain Cover:</b> {spInfo.rain_cover.toString()}
+          </p>
+          <p className="my-6 mx-4">
+            <b>Features:</b> Email us at skateparkWA@gmail.com! Let us know what's at your park
+          </p>
         </div>
       </div>
+
       <Footer />
     </>
   );
 }
 
-// This function gets called at build time
+// This runs at build time -- it gets the url path to every skatepark in the database
 export async function getStaticPaths() {
-  // Call an external API endpoint to get skateparks
+  // This lists all the skateparks and their path
   const res = await fetch("https://skateparks-wa.herokuapp.com/alldem");
   const skateparks = await res.json();
 
-  // Get the paths we want to pre-render based on skateparks
+  // collect the paths
   const paths = skateparks.map((s) => ({
     params: { skatepark: s.slug.toString() },
   }));
 
-  // We'll pre-render only these paths at build time.
   // { fallback: false } means other routes should 404.
   return { paths, fallback: false };
 }
 
 // This also gets called at build time
 export async function getStaticProps({ params }) {
-  // params contains the post `id`.
-  // If the route is like /posts/1, then params.id is 1
+
+  // This fetches the information for every skatepark
+  // You can see what information is included at this example url:
+  // https://skateparks-wa.herokuapp.com/alldem/auburn-skatepark
 
   const res = await fetch(
     `https://skateparks-wa.herokuapp.com/alldem/${params.skatepark}`
   );
   const spInfo = await res.json();
 
-  // Pass post data to the page via props
+  // Pass the skatepark data to the page via props
   return { props: { spInfo } };
 }
 
