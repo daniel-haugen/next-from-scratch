@@ -6,8 +6,8 @@ import Footer from "../components/Footer";
 
 function Skatepark({ spInfo }) {
   
-  // This shows all data available for the park
-  console.log(spInfo);
+  // This shows all data available for the park - uncomment to work
+  // console.log(spInfo);
 
 
   return (
