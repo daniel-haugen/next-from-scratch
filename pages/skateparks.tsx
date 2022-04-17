@@ -16,9 +16,9 @@ function AllSkateparks({ data }) {
   let iterations = Math.ceil(parkCount / parksPerPage);
 
   const renderParks = () => {
-    return allParks.map((park) => {
+    return allParks.map((park, index) => {
       return (
-        <Link href={"/" + park.slug}>
+        <Link href={"/" + park.slug} key={index}>
           <a>
             <div className="border bg-white h-16 flex items-center">
               <h3 className="pl-5 font-bold md:text-xl">{park.name}</h3>

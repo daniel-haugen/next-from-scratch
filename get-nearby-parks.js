@@ -203,12 +203,19 @@ const closestParkArray = parkArray.map(park => {
   return nearbyObject;
 });
 
-console.log(closestParkArray);
+// console.log(closestParkArray);
 
 
 let file = fs.createWriteStream('array.txt');
 file.on('error', function(err) { console.log('shitbroke') });
-closestParkArray.forEach(function(v) { file.write(JSON.stringify(v)); });
+// closestParkArray.forEach(e => file.write(v) );
+console.log(closestParkArray[1]);
+
+
+for (let i = 0; i<closestParkArray.length; i++) {
+file.write(closestParkArray[i].mainPark +',');
+};
+
 file.end();
 
 
