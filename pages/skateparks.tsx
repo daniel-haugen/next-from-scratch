@@ -16,12 +16,13 @@ function AllSkateparks({ data }) {
   let iterations = Math.ceil(parkCount / parksPerPage);
 
   const renderParks = () => {
-    return allParks.map((park) => {
+    return allParks.map((park, index) => {
       return (
-        <Link href={"/" + park.slug}>
+        <Link href={"/" + park.slug} key={index}>
           <a>
             <div className="border bg-white h-16 flex items-center">
-              <h3 className="pl-5 font-bold">{park.name}</h3>
+              <h3 className="pl-5 font-bold md:text-xl">{park.name}</h3>
+              <p className="hidden md:block ml-4 text-xs">({park.city})</p>
             </div>
           </a>
         </Link>
@@ -33,7 +34,7 @@ function AllSkateparks({ data }) {
     <>
       <Navbar />
 
-      <div className="grid grid-cols-2 w-full" id="allList">
+      <div className="grid grid-cols-2 md:grid-cols-3 w-full" id="allList">
         {renderParks()}
       </div>
 
