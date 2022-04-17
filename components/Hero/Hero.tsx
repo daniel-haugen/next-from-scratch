@@ -9,16 +9,11 @@ const Hero: FC = () => {
   return (
     <div className="py-10 bg-charcoal flex flex-col items-center justify-center gap-5">
       <h2 className="text-white text-2xl mx-8 ">
-        Search For...
+        Search For A Park
       </h2>
-      <div className="mt-4 flex gap-10">
-        <button className={s.button}>Park</button>
-        <button className={s.button}>Features</button>
-      </div>
 
       <div className="mt-3">
-        <input type="text" className={s.search} />
-        <button className={s.searchButton}>Search</button>
+        <input type="text" className="h-8" />
       </div>
     </div>
   );

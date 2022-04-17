@@ -18,13 +18,7 @@ const GalleryCard: FC<{ name: string; image: string; slug: string }> = (props) =
     
 
     </div>
-    <h3 className="font-bold mt-4 text-lg">{props.name}</h3>
-    <p className="mt-2 h-12 truncate overflow-hidden">
-      {props.name} is a party. the og spot Lorem, ipsum dolor sit amet
-      consectetur adipisicing elit. Iusto quod veniam quidem, magni alias
-      repellendus labore quibusdam quae architecto reprehenderit eum dolor qui
-      sit dolorem perferendis doloribus quam eius ab?
-    </p>
+    <h3 className="font-bold mt-4 text-lg text-center h-8">{props.name}</h3>
   </div>
 
 

@@ -3,16 +3,16 @@ import Navbar from "../components/Navbar";
 import Card from "../components/Card";
 import Image from "next/image";
 import Footer from "../components/Footer";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/splide/dist/css/splide.min.css";
+import GalleryCard from "../components/GalleryCard";
 
 function Skatepark({ spInfo }) {
-  
   // This shows all data available for the park - uncomment to work
   // console.log(spInfo);
 
-
   return (
     <>
-
       <Navbar />
 
       {/* You can see what information is included at this example url:
@@ -24,21 +24,53 @@ function Skatepark({ spInfo }) {
             {spInfo.name} Skatepark
           </h1>
           <div className="relative h-80 mx-auto max-w-3xl">
-            <Image src={spInfo.main.formats.small.url} alt="you know what it is" layout="fill" />
+            <Image
+              src={spInfo.main.formats.small.url}
+              alt="you know what it is"
+              layout="fill"
+            />
           </div>
-          <p className="text-center mt-4">If you have images of this skatepark -- email them to skatewa.info@gmail.com to have them updated :) </p>
-          <p className="mt-6 mx-4">
-            <b>Address:</b> {spInfo.full_address}
-          </p>
-          <p className="my-6 mx-4">
-            <b>Native Land:</b> {spInfo.native_land}
-          </p>
-          <p className="my-6 mx-4">
-            <b>Rain Cover:</b> {spInfo.rain_cover.toString()}
-          </p>
-          <p className="my-6 mx-4">
-            <b>Features:</b> Email us at skateparkWA@gmail.com! Let us know what's at your park
-          </p>
+          <div id="skatepark-info">
+            <p className="border-b text-center py-5">
+              email images to skatewa.info@gmail.com
+            </p>
+            <p className="mt-6 mx-4">
+              <b>Address:</b> {spInfo.full_address}
+            </p>
+            <p className="my-6 mx-4">
+              <b>Native Land:</b> {spInfo.native_land}
+            </p>
+            <p className="my-6 mx-4">
+              <b>Rain Cover:</b> {spInfo.rain_cover.toString()}
+            </p>
+            <p className="my-6 mx-4">
+              <b>Features:</b> soon....
+            </p>
+          </div>
+
+          <div id="nearbyParks" className="bg-charcoal mt-16">
+            <h4 className="bg-white underline pl-3 py-8 text-2xl font-bold border-t border-b">Nearby Parks</h4>
+
+            <Splide
+            className="mt-4"
+            tag="section"
+            options={{
+              autoplay: true,
+              arrows: false,
+              pagination: false,
+              padding: '20%'
+            }}
+          >
+             <SplideSlide>
+              <GalleryCard name="Judkins" image="test2" slug="judkins-skatepark" />
+            </SplideSlide>
+            
+            <SplideSlide>
+              <GalleryCard name="Sammamish" image="test2" slug="sammamish-skatepark"/>
+            </SplideSlide>
+          </Splide>
+          </div>
+
         </div>
       </div>
 
@@ -64,7 +96,6 @@ export async function getStaticPaths() {
 
 // This also gets called at build time
 export async function getStaticProps({ params }) {
-
   // This fetches the information for every skatepark
   // You can see what information is included at this example url:
   // https://skateparks-wa.herokuapp.com/alldem/auburn-skatepark

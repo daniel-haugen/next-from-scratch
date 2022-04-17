@@ -25,6 +25,8 @@ const ExploreGallery: FC = () => {
             options={{
               autoplay: true,
               arrows: false,
+              pagination: false,
+              padding: '20%'
             }}
           >
              <SplideSlide>
@@ -45,12 +47,13 @@ const ExploreGallery: FC = () => {
               autoplay: true,
               arrows: false,
               perPage: 2,
+              pagination: false,
             }}
           >
              <SplideSlide>
               <GalleryCard name="Judkins" image="test2" slug="judkins-skatepark" />
             </SplideSlide>
-            
+  
             <SplideSlide>
               <GalleryCard name="Sammamish" image="test2" slug="sammamish-skatepark"/>
             </SplideSlide>
