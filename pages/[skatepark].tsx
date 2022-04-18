@@ -1,8 +1,6 @@
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Card from "../components/Card";
-import Image from "next/image";
-import noImage from '../public/no-image-2.png'
 import Footer from "../components/Footer";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
@@ -25,11 +23,10 @@ function Skatepark({ spInfo }) {
             {spInfo.name} Skatepark
           </h1>
           <div className="relative h-80 mx-auto max-w-3xl">
-            {/* <Image
-              src={noImage}
+            <img
+              src='/images/no-image-2.png'
               alt="you know what it is"
-              layout="fill"
-            /> */}
+            />
           </div>
           <div id="skatepark-info">
             <p className="border-b text-center py-5">
