@@ -21,7 +21,6 @@ const ExploreGallery: FC = () => {
 
         <div id="mobileGallery" className="border-t-2 pt-4 bg-charcoal md:hidden">
           <Splide
-            tag="section"
             options={{
               autoplay: true,
               arrows: false,
@@ -42,7 +41,6 @@ const ExploreGallery: FC = () => {
           {/* DESKTOP VERSION */}
           <div id="desktopGallery" className="border-t-2 pt-4 bg-charcoal hidden md:block">
           <Splide
-            tag="section"
             options={{
               autoplay: true,
               arrows: false,

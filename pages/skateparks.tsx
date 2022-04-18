@@ -20,9 +20,11 @@ function AllSkateparks({ data }) {
       return (
         <Link href={"/" + park.slug} key={index}>
           <a>
-            <div className="border bg-white h-16 flex items-center">
-              <h3 className="pl-5 font-bold md:text-xl">{park.name}</h3>
-              <p className="hidden md:block ml-4 text-xs">({park.city})</p>
+            <div className="border hover:bg-green bg-white h-24 flex items-center rounded">
+              <div className="flex flex-col pl-3">
+              <h3 className="font-bold md:text-xl">{park.name}</h3>
+              <p className="md:block text-xs">{park.address}</p>
+              </div>
             </div>
           </a>
         </Link>
@@ -34,7 +36,7 @@ function AllSkateparks({ data }) {
     <>
       <Navbar />
 
-      <div className="grid grid-cols-2 md:grid-cols-3 w-full" id="allList">
+      <div className="grid grid-cols-2 md:grid-cols-3 w-full gap-2" id="allList">
         {renderParks()}
       </div>
 

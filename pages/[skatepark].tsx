@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Card from "../components/Card";
-import Image from "next/image";
 import Footer from "../components/Footer";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
@@ -23,11 +22,11 @@ function Skatepark({ spInfo }) {
           <h1 className="font-bold text-center text-2xl py-4">
             {spInfo.name} Skatepark
           </h1>
-          <div className="relative h-80 mx-auto max-w-3xl">
-            <Image
-              src={spInfo.main.formats.small.url}
+          <div className="h-80 border mx-auto max-w-3xl grid place-items-center">
+            <img
+              src='/images/no-image-2.png'
               alt="you know what it is"
-              layout="fill"
+              className="w-72 border"
             />
           </div>
           <div id="skatepark-info">
@@ -41,7 +40,7 @@ function Skatepark({ spInfo }) {
               <b>Native Land:</b> {spInfo.native_land}
             </p>
             <p className="my-6 mx-4">
-              <b>Rain Cover:</b> {spInfo.rain_cover.toString()}
+              <b>Rain Cover:</b> {spInfo.rain_cover.toString() == true ? 'protected from rain': 'nope'}
             </p>
             <p className="my-6 mx-4">
               <b>Features:</b> soon....
@@ -53,7 +52,7 @@ function Skatepark({ spInfo }) {
 
             <Splide
             className="mt-4"
-            tag="section"
+           
             options={{
               autoplay: true,
               arrows: false,

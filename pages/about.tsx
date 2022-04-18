@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar"
-import Image from 'next/image'
+import thicc from '../public/thicc.png'
+// import Image from 'next/image'
 
 
 function About() {
@@ -9,8 +10,8 @@ function About() {
       <h2 className="my-10 text-xl font-bold text-white">About Page</h2>
     
     <div className="">
-      <Image
-            src='/thicc.jpg'
+      <img
+            src='/images/thicc.png'
             alt='you know what it is'
             width='500'
             height='700'/>
