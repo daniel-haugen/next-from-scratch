@@ -3,6 +3,7 @@ import Link from "next/link";
 import s from "./Card.module.css";
 import { getStaticProps } from "../../pages/[skatepark]";
 import Image from "next/image";
+import thicc from '../../public/thicc.png'
 
 interface Link {
   href: string;
@@ -14,7 +15,7 @@ const GalleryCard: FC<{ name: string; image: string; slug: string }> = (props) =
   <a>
   <div className="mx-8 mb-6 border-2 rounded border-gray-light bg-white">
     <div className="bg-grey h-32 md:h-64 grid items-center relative">
-      <Image src="/thicc.jpg" alt="you know what it is" layout="fill" />
+      {/* <Image src={thicc} alt="you know what it is" layout="fill" /> */}
     
 
     </div>
